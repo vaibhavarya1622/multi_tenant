@@ -1,24 +1,18 @@
 package com.vaibhav.multi_tenant.config;
 
-import com.vaibhav.multi_tenant.model.admin.Config;
 import com.vaibhav.multi_tenant.repository.admin.ConfigRepository;
 import net.ttddyy.dsproxy.support.ProxyDataSourceBuilder;
-import org.flywaydb.core.Flyway;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.autoconfigure.flyway.FlywayMigrationStrategy;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.DependsOn;
-import org.springframework.context.annotation.Primary;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import javax.sql.DataSource;
-import java.util.List;
 
 @Configuration
 @EnableJpaRepositories(

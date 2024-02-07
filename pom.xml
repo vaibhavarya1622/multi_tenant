@@ -15,9 +15,6 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
-		<flyway.user>postgres</flyway.user>
-		<flyway.password>secret</flyway.password>
-		<flyway.schemas>dbOperator</flyway.schemas>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -42,11 +39,6 @@
 			<artifactId>datasource-proxy</artifactId>
 			<version>1.7</version>
 		</dependency>
-		<dependency>
-			<groupId>org.flywaydb</groupId>
-			<artifactId>flyway-core</artifactId>
-		</dependency>
-
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
