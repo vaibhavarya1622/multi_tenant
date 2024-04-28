@@ -27,7 +27,7 @@ public class TenantDataSourceConfig {
     private int batchSize;
     @Bean("tenantManagerFactory")
     LocalContainerEntityManagerFactoryBean tenantManger(@Qualifier("tenantDataSource") DataSource tenantDataSource){
-        return entityManager(ProxyDataSourceBuilder.create(tenantDataSource).name("tenantDataSource").build(),"com.vaibhav.multi_tenant.model.tenant");
+        return entityManager(ProxyDataSourceBuilder.create("tenantDataSource",tenantDataSource).build(),"com.vaibhav.multi_tenant.model.tenant");
     }
     @Bean("tenantTransactionManager")
     PlatformTransactionManager tenantTransactionManager(@Qualifier("tenantManagerFactory") LocalContainerEntityManagerFactoryBean tenantEntityManager){
